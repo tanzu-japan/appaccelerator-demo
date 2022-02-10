@@ -6,23 +6,23 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Controller {
+public class DemoController {
 
-    private final Repository repository;
+    private final DemoRepository demoRepository;
 
-    public Controller(Repository repository) {
-        this.repository = repository;
+    public DemoController(DemoRepository demoRepository) {
+        this.demoRepository = demoRepository;
     }
 
     @PutMapping("/create")
     public void create(@RequestParam String name){
-        Entity e = new Entity();
+        DemoEntity e = new DemoEntity();
         e.setName(name);
-        repository.save(e);
+        demoRepository.save(e);
     }
 
     @GetMapping("/")
-    public Iterable<Entity> getAll(){
-        return repository.findAll();
+    public Iterable<DemoEntity> getAll(){
+        return demoRepository.findAll();
     }
 }

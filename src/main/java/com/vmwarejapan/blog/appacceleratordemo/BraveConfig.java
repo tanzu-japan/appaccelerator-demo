@@ -4,10 +4,10 @@ import brave.handler.MutableSpan;
 import brave.handler.SpanHandler;
 import brave.propagation.TraceContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
-@Component
-public class DBHandler {
+@Configuration
+public class BraveConfig {
     @Bean
     SpanHandler handlerOne() {
         return new SpanHandler() {
