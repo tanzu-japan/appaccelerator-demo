@@ -8,3 +8,28 @@ accelerator:
     - cloud
     - wavefront
     - tanzu
+  # options for the UI
+  options:
+    - name: service_name
+      inputType: text
+      label: service name
+      description: service name
+      required: true
+    - name: app_name
+      inputType: text
+      label: app name of app
+      description: app name
+      required: true
+
+engine:
+  merge:
+    - include: [ "**" ]
+      exclude: [ "src/main/resources/application.properties" ]
+    - include: [ "src/main/resources/application.properties" ]
+      chain:
+        - type: ReplaceText
+          substitutions:
+            - text: service1
+              with: "#service_name"
+            - text: app1
+              with: "#app_name"
