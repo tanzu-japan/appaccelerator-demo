@@ -1,0 +1,11 @@
+accelerator:
+  displayName: Hello Fun
+  description: A simple Spring Cloud Function serverless app
+  iconUrl: https://raw.githubusercontent.com/sample-accelerators/icons/master/icon-cloud.png
+  tags:
+    - java
+    - spring
+    - cloud
+    - function
+    - serverless
+    - tanzu
