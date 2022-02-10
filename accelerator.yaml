@@ -10,12 +10,12 @@ accelerator:
     - tanzu
   # options for the UI
   options:
-    - name: service_name
+    - name: serviceName
       inputType: text
       label: service name
       description: service name
       required: true
-    - name: app_name
+    - name: appName
       inputType: text
       label: app name of app
       description: app name
@@ -30,6 +30,6 @@ engine:
         - type: ReplaceText
           substitutions:
             - text: service1
-              with: "#service_name"
+              with: "#serviceName"
             - text: app1
-              with: "#app_name"
+              with: "#appName"
