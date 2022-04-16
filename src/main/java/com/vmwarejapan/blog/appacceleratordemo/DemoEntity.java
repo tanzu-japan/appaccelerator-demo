@@ -1,11 +1,12 @@
 package com.vmwarejapan.blog.appacceleratordemo;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@javax.persistence.Entity
-public class Entity {
+@Entity
+public class DemoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
